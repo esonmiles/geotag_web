@@ -1,0 +1,56 @@
+.login_title img{
+    width: 70px;
+    margin-right: 10px;
+
+}
+#error_log{
+}
+.hid{
+    display:none;
+}
+.form-group > label{
+    text-align: left;
+}
+.text-red {
+    color: #dd4b39 !important;
+}
+.text-green {
+    color: #00a65a !important;
+}
+.disabled{
+    pointer-events: none;
+    opacity: .7;
+}
+#result{
+    /*! float:left; */
+    display:none;
+    position: relative;
+    margin-left: 37px;
+    margin-top: -7px;
+}
+#result > p{
+    
+    border: 1px solid #ccc;
+    padding: 3px 9px;
+    margin-bottom: 2px;
+}
+.results:hover {
+    cursor: pointer;
+    background:#0071bc;
+    color:#fff;
+}
+.scrolled{
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.projectImg{
+    width:100%;
+}
+.viewLink{
+   text-align:center;
+   font-size:15px; 
+}
+.viewLink:hover {
+    text-decoration: underline;
+    cursor:pointer;
+}
