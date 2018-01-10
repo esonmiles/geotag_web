@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+Options +Indexes
+ReWriteEngine On
+ErrorDocument 404 "Page not found"
+
+RewriteRule ^login  login_index.php
+RewriteRule ^register  register_index.php
+RewriteRule ^confirmation/([^.]+)$ php/confirmation.php?id=$1
