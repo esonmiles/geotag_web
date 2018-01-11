@@ -85,6 +85,10 @@ $selectedProject = $get->getSelectedProjectInfo($projectId);
                         $getFieldTypeChoices = $get->getFieldTypeChoices($projectId);
                         foreach ($getFieldTypeChoices as $cid => $fieldTypeChoices) {
                         $choices = '';
+							if ($fieldTypeChoices['isActive'] == 0)
+                                $isActive = 'Inactive';
+                            else
+                                $isActive = 'Active';
                             $getChoices = $get->getChoices($fieldTypeChoices['fieldId']);
                             foreach ($getChoices as $id => $record):
                                 $choices .= $record['choiceName'] . ', ';
@@ -98,7 +102,7 @@ $selectedProject = $get->getSelectedProjectInfo($projectId);
                                 <td class="text-center"><?php echo $fieldTypeChoices['fieldTypeDisplay']; ?></td>
                                 <td><?php echo date("F d, Y", strtotime($fieldTypeChoices['dateCreated'])); ?></td>
                                 <td class="text-center"><?php echo $choices; ?></td>
-                                <td><button data-toggle="modal" data-target="#updateModal2" class="btn btn-info btn-sm editField" id="<?php echo $fieldTypeSubType['fieldId']; ?>"> Update Field </button></td>
+                                <td><button data-toggle="modal" data-target="#updateModal2" class="btn btn-info btn-sm editField" id="<?php echo $fieldTypeChoices['fieldId']; ?>"> Update Field </button></td>
 
                             </tr>
                             <?php
